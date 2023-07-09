@@ -2,11 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulario Veterinaria</title>
-    <link rel="stylesheet" href="/stylesheets/style-formulario.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel="icon" href="imagenes/edificios.ico">
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+    <link rel="stylesheet" href="/stylesheets/styledoc.css">
+    <link rel="icon" href="/images/hospital.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Registro Citas</title>
 </head>
 
 <body>
@@ -14,27 +20,60 @@
         <h1>CENTRO MEDICO VETERINARIO BACKEND</h1>
     </header>
     <main>
-        <form action="./agregar" method="post">
-            <h2>CITA MEDICA</h2>
-            <label for="cedula">Número de Cédula:<span> *</span></label>
-            <input type="text" id="cedula" name="cedula" required><br>
-            <label for="fecha">Fecha:<span> *</span></label>
-            <input type="date" id="fecha" name="fecha" required><br>
-            <label for="especialidad">Especialidad requerida:<span> *</span></label>
-            <select id="especialidad" name="especialidad" required>
-                <option value="">------------------------  Seleccione la especialidad  ---------------------</option>
-                <option value="Medicina general">Medicina general</option>
-                <option value="Medicina interna">Medicina interna</option>
-                <option value="Medicina veterinaria preventiva">Medicina veterinaria preventiva</option>
-                <option value="Dermatología veterinaria">Dermatología veterinaria</option>
-                <option value="Cirugía veterinaria">Cirugía veterinaria</option>
-                <option value="Veterinaria conductual">Veterinaria conductual</option>
-                <option value="Odontología veterinaria">Odontología veterinaria</option>
-                <option value="Farmacología veterinaria">Farmacología veterinaria</option>
-            </select><br>
-            <input type="submit" value="Enviar">
-        </form>
-    </main>
-</body>
+        <section class="vh-100" id="fondo">
+            <div class="negro">
+                <div class="container py-8 h-100">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col col-xl-10" id="cont">
+                            <div class="card" style="border-radius: 1rem;" id="bgn">
+                                <div class="row g-0">
+                                    <div class="col-md-6 col-lg-5 d-none d-md-block">
+                                        <img src="https://images.pexels.com/photos/4021808/pexels-photo-4021808.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+                                            alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+                                    </div>
+                                    <div class="col-md-6 col-lg-7 d-flex align-items-center">
+                                        <div class="card-body p-4 p-lg-5 text-black">
+                                            <form class=" row g-3" method="post" action="./agregar">
 
+                                                <div class="d-flex align-items-center mb-3 pb-1">
+                                                    <span class="h1 fw-bold mb-0">CITAS-<em>REGISTRO</em></span>
+                                                </div>
+
+                                                <h5 class="fw-normal colore" style="letter-spacing: 1px;">Agenda tu
+                                                    cita
+                                                </h5>
+                                                <div class="col-12 ">
+                                                    <input type="text" class="form-control" id="cedula" name="cedula"
+                                                        placeholder="Cedula" required="">
+                                                </div>
+                                                <div class="col-12">
+                                                    <input type="date"class="form-control" id="fecha" name="fecha"
+                                                        placeholder="Fecha" required="">
+                                                </div>
+                                                <div class="col-12">
+                                                    <select class="form-select" id="especialidad" name="especialidad">
+                                                        <option disabled selected>Especialidad</option>
+                                                        <option value="Medicina general">Medicina general </option>
+                                                        <option value="Cardiología">Cardiología</option>
+                                                        <option value="Medicina interna ">Medicina interna.</option>
+                                                        <option value="Dermatología">Dermatología.</option>
+                                                        <option value="Rehabilitación física.">Rehabilitación física.
+                                                        </option>
+                                                        <option value="Psicología">Psicología. </option>
+                                                        <option value="Odontología">Odontología</option>
+                                                        <option value="Radiología">Radiología</option>
+                                                    </select>
+                                                    </select>
+                                                </div>
+                                                <div class="pt-1">
+                                                    <button class="btn btn-primary" type="submit">Registrar</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 </html>
