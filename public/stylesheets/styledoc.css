@@ -1,0 +1,36 @@
+
+#fondo{
+    background-image: url(https://images.pexels.com/photos/5407215/pexels-photo-5407215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-color: white;
+}
+
+
+.negro{
+   background-color: rgba(0, 0, 0, 0.473);
+   height: 100%;
+}
+
+#bgn{
+    
+    background-color: rgba(255, 250, 250, 0.26);
+}
+#cont {
+      width: 89%;
+     
+}
+
+.colore{
+
+    color: rgb(255, 255, 255);
+}
+em{
+    font-family: 'Anton', sans-serif;
+    color:rgb(174, 232, 255);
+}
+
+
+.cuadrar{
+
+    padding-top: 8%;
+    height: 400px;
+}
