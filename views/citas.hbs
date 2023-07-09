@@ -1,28 +1,37 @@
-<h1>CENTRO MEDICO BAM</h1>
-<h2>LISTADO DE CITAS MEDICAS</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Cedula</th>
-            <th>Fecha</th>
-            <th>Especialidad</th>
-        </tr>
-    </thead>
-    <tbody>
-        {{#each citas}}
-        <tr>
-            <td>{{formatearFecha fecha}}</td>
-            <td>{{cedula}}</td>
-            <td>{{especialidad}}</td>
-            
-            <td>
-                <a class="eliminar" href="/citas/eliminar/{{id}}">Eliminar</a>
-            </td>
-        </tr>
-        {{/each}}
-    </tbody>
-</table>                                                                                                                                                                                            
-<div class="opciones-tabla">
-    <a class="volver" href="/">Volver</a>
-    <a href="/citas/agregar-cita">Nueva cita</a>
-</div>
+<div class="contenido2">
+    <div class="sobrefondo2">
+        <h1>CENTRO MEDICO BAM</h1>
+        <h2>LISTADO DE CITAS MEDICAS</h2>
+        <div id="tabla-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fecha</th>
+                        <th>Paciente</th>
+                        <th>Medico</th>
+                        <th>Consultorio</th>
+                        <th>Opciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each citas}}
+                    <tr>
+                         <form method="post">
+                            <td><input value="{{formatearFecha fecha}}" disabled></td>
+                            <td><input value="{{nombre}}"></td>
+                            <td><input value="{{nombres}}"></td>
+                            <td><input value="{{consultorio}}"></td>
+                        <td>
+                            <a class="eliminar" href="/citas/eliminar/{{id}}"><img
+                                        src="/images/eliminar.png"></a>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            <div class="opciones-tabla">
+                <a class="volver" href="/">Volver</a>
+                <a href="/citas/agregar-cita">Nueva cita</a>
+            </div>
+        </div>
+    </div>
