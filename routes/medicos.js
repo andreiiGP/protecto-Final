@@ -20,7 +20,7 @@ router.get('/agregar-medico', (req, res) =>{
   res.sendFile('registro-medico.html', {root: 'public'});
 })
 
-router.post('/agregar', (req, res) =>{
+router.post('/agregarr', (req, res) =>{
   const cedula = req.body.cedula;
   const nombre = req.body.nombre;
   const apellido = req.body.apellido;

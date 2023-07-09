@@ -9,7 +9,7 @@ router.get('/', function (req, res) {
       console.log("Error en la consulta", error)
       res.status(500).send("Error en la consulta");
     } else {
-      res.render('pacientes', {pacientes: results, opcion: 'disabled', estado: true});
+      res.render('pacientes', { pacientes: results, opcion: 'disabled', estado: true });
     }
   });
 });
@@ -21,13 +21,14 @@ router.get('/agregar-pacientes', (req, res) => {
   res.sendFile('registro-pacientes.html', { root: 'public' });
 })
 
-router.post('/agregarr', (req, res) => {
+router.post('/agregar', (req, res) => {
   const cedula = req.body.cedula;
   const nombre = req.body.nombre;
   const apellido = req.body.apellido;
   const edad = req.body.edad;
-  const telefono = req.body.telefono;
-  connection.query(`INSERT INTO pacientes (cedula, nombre, apellido, edad, telefono) VALUES (${cedula},'${nombre}', '${apellido}', ${edad}, '${telefono}')`, (error, result) => {
+  const telefono = req.body.edad;
+  connection.query(`INSERT INTO pacientes (cedula,nombre,apellido,edad,telefono) VALUES 
+  (${cedula},'${nombre}','${apellido}','${edad}','${telefono}')`, (error, results) => {
     if (error) {
       console.log("Ocurrio un error en la ejecución", error)
       res.status(500).send("Error en la consulta");
@@ -45,7 +46,7 @@ router.get('/activar', function (req, res) {
       console.log("Error en la consulta", error)
       res.status(500).send("Error en la consulta");
     } else {
-      res.render('pacientes', { pacientes: results, opcion: ''});
+      res.render('pacientes', { pacientes: results, opcion: '' });
     }
   });
 });
