@@ -19,7 +19,6 @@ router.get('/', function(req, res, next) {
 router.get('/agregar-medico', (req, res) =>{
   res.sendFile('registro-medico.html', {root: 'public'});
 })
-
 router.post('/agregarr', (req, res) =>{
   const cedula = req.body.cedula;
   const nombre = req.body.nombre;
@@ -35,6 +34,7 @@ router.post('/agregarr', (req, res) =>{
       res.redirect('/medicos');
     }
   });
+    
 })
 
 // Actualizar medicos
